@@ -1,4 +1,5 @@
 import os
+import sys
 import json
 import time
 import joblib
@@ -146,10 +147,10 @@ if models is None:
     if st.sidebar.button("⚙️ Setup & Train Models Now", use_container_width=True):
         with st.spinner("Generating synthetic data..."):
             import subprocess
-            subprocess.run(["python3", "generate_data.py"])
+            subprocess.run([sys.executable, "generate_data.py"])
         with st.spinner("Training ML classifiers and regressors..."):
-            subprocess.run(["python3", "train_models.py"])
-            subprocess.run(["python3", "create_samples.py"])
+            subprocess.run([sys.executable, "train_models.py"])
+            subprocess.run([sys.executable, "create_samples.py"])
         st.cache_resource.clear()
         st.rerun()
 else:
@@ -293,7 +294,7 @@ with tab2:
                 # Check if sample files exist, generate if missing
                 if not os.path.exists("sample_images/apple_fresh.png"):
                     import subprocess
-                    subprocess.run(["python3", "create_samples.py"])
+                    subprocess.run([sys.executable, "create_samples.py"])
                     
                 if fruit_selection == "Apple":
                     img_fresh = "sample_images/apple_fresh.png"
