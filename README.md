@@ -64,6 +64,19 @@ This will start a local server (typically at `http://localhost:8501`) and automa
 
 ---
 
+## 🌐 Deployment to Streamlit Cloud
+
+The application is deployed live on Streamlit Community Cloud:
+👉 **[Live Demo](https://fruit-freshness-analyzer-fwzgeq3vxcjb6lagqcozsb.streamlit.app/)**
+
+### Steps to Deploy Your Own Copy:
+1. Go to [share.streamlit.io](https://share.streamlit.io/) and log in with your GitHub account.
+2. Click **"New app"**, select your repository, set the branch to `main`, and main file path to `app.py`.
+3. Click **"Deploy"**.
+4. **First-Time Activation**: On the first launch in the cloud environment, open the sidebar and click the **"⚙️ Setup & Train Models Now"** button. This will dynamically generate the simulated datasets and train the ML classifiers/regressors directly inside the cloud container (taking about 10 seconds).
+
+---
+
 ## 🧠 ML Performance Metrics
 - **Spectral Freshness Classification**: **100% Accuracy** (Random Forest on synthetic spectra)
 - **E-Nose Freshness Classification**: **99.92% Accuracy** (Gradient Boosting on gas sensors)
