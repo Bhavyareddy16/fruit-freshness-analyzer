@@ -1,0 +1,20 @@
+{
+    "spectral_classifier_accuracy": 1.0,
+    "spectral_regressor_metrics": {
+        "sugar_brix": {
+            "R2": 0.9397937020231151,
+            "RMSE": 0.8666512913731101
+        },
+        "moisture_pct": {
+            "R2": 0.9673519256813453,
+            "RMSE": 1.0720089003480253
+        },
+        "firmness_n": {
+            "R2": 0.9712268874096266,
+            "RMSE": 3.7631031744728505
+        }
+    },
+    "enose_svm_accuracy": 1.0,
+    "enose_gb_accuracy": 0.9991666666666666,
+    "spoilage_regressor_r2": 0.9017811727195497
+}
